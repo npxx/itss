@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='css/home.css') }}"
+    />
+  </head>
+  <body>
+    <div class="contact1">
+      <div class="container-contact1">
+        <form
+          class="contact1-form validate-form"
+          method="POST"
+          action="{{ url_for('addrec') }}"
+        >
+          <br />
+          <br />
+
+          <div
+            class="wrap-input1 validate-input"
+            data-validate="Roll is required"
+          >
+            <h3>{{msg}}</h3>
+          </div>
+
+          <div class="container-contact1-form-btn">
+            <a href="\" style="text-decoration: none"
+              ><input
+                class="contact1-form-btn"
+                type="button"
+                value="Take me back!"
+            /></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

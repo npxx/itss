@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='css/home.css') }}"
+    />
+  </head>
+
+  <div class="contact1">
+    <div class="container-contact1">
+      <form
+        class="contact1-form validate-form"
+        method="POST"
+        action="{{ url_for('addrec') }}"
+      >
+        <h3>Student Information</h3>
+        <br />
+        <br />
+
+        <div
+          class="wrap-input1 validate-input"
+          data-validate="Roll is required"
+        >
+          <input
+            class="input1"
+            name="rollno"
+            type="number"
+            placeholder="Roll No. : 229XXX"
+          />
+        </div>
+
+        <div class="wrap-input1 validate-input">
+          <input
+            class="input1"
+            name="fn"
+            type="text"
+            placeholder="First Name"
+          />
+        </div>
+
+        <div class="wrap-input1 validate-input">
+          <input class="input1" name="ln" type="text" placeholder="Last Name" />
+        </div>
+
+        <div class="wrap-input1 validate-input">
+          <select class="input1" name="ge" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+        <div class="wrap-input1 validate-input">
+          <input
+            class="input1"
+            name="em"
+            type="email"
+            placeholder="ccid@iitk.ac.in"
+          />
+        </div>
+        <div class="wrap-input1 validate-input">
+          <input class="input1" name="ci" type="text" placeholder="City" />
+        </div>
+
+        <div class="container-contact1-form-btn">
+          <input class="contact1-form-btn" type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</html>

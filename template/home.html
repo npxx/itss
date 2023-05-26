@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+/>
+<script>
+  function disableEmptyInputs(form) {
+    var controls = form.elements;
+    for (var i = 0, iLen = controls.length; i < iLen; i++) {
+      if (controls[i].value == "") controls[i].disabled = true;
+    }
+  }
+</script>
+</head>
+<body>
+<div class="contact1">
+  <div class="container-contact1">
+    <form
+      class="contact1-form validate-form"
+      method="GET"
+      action="{{ url_for('stud') }}"
+      onsubmit="disableEmptyInputs(this)"
+    >
+      <br />
+      <br />
+
+      <div class="wrap-input1 validate-input" data-validate="Roll is required">
+        <h3>IITK-themed Student Search</h3>
+      </div>
+      <div class="wrap-input1 validate-input" data-validate="Roll is required">
+        <input
+          class="input1"
+          name="rn"
+          type="number"
+          placeholder="Roll No. : 229XXX"
+        />
+      </div>
+
+      <div class="wrap-input1 validate-input">
+        <input class="input1" name="fn" type="text" placeholder="First Name" />
+      </div>
+
+      <div class="wrap-input1 validate-input">
+        <input class="input1" name="ln" type="text" placeholder="Last Name" />
+      </div>
+
+      <div class="wrap-input1 validate-input">
+        <select class="input1" name="ge">
+            <option label=" "></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <div class="wrap-input1 validate-input">
+        <input
+          class="input1"
+          name="em"
+          type="email"
+          placeholder="ccid@iitk.ac.in"
+        />
+      </div>
+      <div class="wrap-input1 validate-input">
+        <input class="input1" name="ci" type="text" placeholder="City" />
+      </div>
+
+      <div class="container-contact1-form-btn">
+        <input class="contact1-form-btn" type="submit" value="submit" />
+        <a href="\enternew" style="text-decoration: none"
+          ><input
+            class="contact1-form-btn"
+            type="button"
+            value="add new record"
+        /></a>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

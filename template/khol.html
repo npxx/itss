@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home.css') }}"
+    />
+    <title>Table Example</title>
+  </head>
+  <body>
+    <div class="contact1">
+      <div class="container-contact1">
+        <div class="contact1-form">
+          {% for row in rows %} मेरा रोल नं. {{ row["rollno"] }} है |<br />
+          मेरा नाम {{ row["firstname"] }} {{ row["lastname"] }} है |<br />
+          मै {{ row["gender"] }} हूँ |<br />
+          मेरा ई-मेल {{ row["email"] }} है |<br />
+          मै {{ row["city"] }} से आया/आयी हूँ | {% endfor %}
+        </div>
+        <div class="container-contact1-form-btn">
+          <a href="\" style="text-decoration: none"
+            ><input
+              class="contact1-form-btn"
+              type="button"
+              value="Take me back!"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
